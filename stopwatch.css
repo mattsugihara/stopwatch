@@ -1,0 +1,37 @@
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-family: sans-serif;
+}
+
+body {
+	background: rgba(200,200,200,.2);
+}
+
+#tap{
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: block;
+}
+
+#time{
+	display: block;
+	text-align: center;
+	position: relative;
+	top:50%;
+	-webkit-transform:translateY(-50%);
+		-ms-transform:translateY(-50%);
+			transform:translateY(-50%);
+	font-size: 20vw;
+	color:#333;
+	font-weight: 100;
+}
+
+#hours-section{
+	display: none;
+}
