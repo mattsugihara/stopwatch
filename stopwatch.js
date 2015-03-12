@@ -55,12 +55,13 @@ function runTheClock() {
   digits[2] = Math.floor((duration / 1000) % 60);
   digits[3] = Math.floor(duration / (10));
 
+  //prevents the display from getting too wide. Deciseconds aren't userful on the hour scale
   if(1<=digits[0]){
     document.getElementById('hours-section').style.display='inline';
     document.getElementById('deciseconds-section').style.display='none';
   }
 
-  // force numbers to appear in two digits
+  // force numbers to appear as two digits
   for (var i = digits.length - 1; i >= 0; i--) {
     digits[i] = ('0' + digits[i]).slice(-2);
   };
