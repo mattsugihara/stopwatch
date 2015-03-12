@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>stopwatch</title>
+	<meta name="viewport" content="initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="stopwatch.css">
+</head>
+<body>
+	<a id="tap"></a>
+	<div id="time">
+			   <span id="hours-section" class="hidden"><span id="hours">00</span>:</span><span id="minutes">00</span>:<span id="seconds">00</span><span id="deciseconds-section">.<span id="deciseconds">00</span></span>
+	</div>
+	<script type="text/javascript" src="stopwatch.js"></script>
+	<script type="text/javascript" src="doubleTap.js"></script>
+	<script>
+		var HAS_TOUCH = ('ontouchstart' in window);
+		var tap = document.getElementById('tap');
+		tap.addEventListener(HAS_TOUCH ? 'touchend' : 'mouseup', doubleTap(), false);
+		tap.addEventListener('tap', startStop, false);
+		tap.addEventListener('dbltap', resetTheClock, false);
+	</script>
+</body>
+</html>
